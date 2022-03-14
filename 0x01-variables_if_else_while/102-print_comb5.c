@@ -19,7 +19,7 @@ int main(void)
 				for (k = '0'; k <= '9'; k++)
 				{
 					if (h == '0' && i == '0' && j == '0' && k == '0')
-						continue
+						continue;
 					if (h != '0' || i != '0' || j != '0' || k != '1')
 					{
 						putchar(',');
