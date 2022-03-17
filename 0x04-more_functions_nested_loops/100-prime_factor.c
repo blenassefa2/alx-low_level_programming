@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	int i, n;
+	long int i, n;
 
 	i = 2;
 	n = 612852475143;
