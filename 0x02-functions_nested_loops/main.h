@@ -4,7 +4,7 @@
  *
  * Return: void (noting)
  */
-
+#ifndef
 void print_alphabet(void)
 {
 	int j;
@@ -13,3 +13,4 @@ void print_alphabet(void)
 		putchar(j);
 	putchar('\n');
 }
+#endif
