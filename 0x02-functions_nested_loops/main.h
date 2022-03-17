@@ -1,16 +1,11 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 #include <stdio.h>
 /**
  * print_alphabet - prints alphabets in lowercase
  *
  * Return: void (noting)
  */
-#ifndef
-void print_alphabet(void)
-{
-	int j;
-
-	for (j = 'a'; j <= 'z'; j++)
-		putchar(j);
-	putchar('\n');
-}
+void print_alphabet(void);
 #endif
