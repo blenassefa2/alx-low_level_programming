@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * print_triangle - print a diagonal
  * @n: length of diagonal
@@ -13,14 +14,14 @@ void print_triangle(int n)
 		{
 			for (j = 1; j < n; j++)
 			{
-				putchar(' ');
+				_putchar(' ');
 			}
 			for (k = i; k >= 1 && j >= n; k--)
 			{
-				putchar('#');
+				_putchar('#');
 			}
-			putchar('\n');
+			_putchar('\n');
 		}
 	else
-		putchar('\n');
+		_putchar('\n');
 }
