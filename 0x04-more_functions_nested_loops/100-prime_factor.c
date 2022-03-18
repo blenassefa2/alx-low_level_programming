@@ -10,13 +10,13 @@ int main(void)
 	i = 2;
 	n = 612852475143;
 
-	while (i * i < n)
+	while (i < n)
 	{
-		while (n % i == 0)
+		if (n % i == 0)
 		{
-			n = n / i
+			n /= i
 		}
-		i = i + 1;
+		i++;
 	}
 	printf("%ld\n", n);
 	return (0);
