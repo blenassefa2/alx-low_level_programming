@@ -6,8 +6,6 @@
  */
 int _atoi(char *s)
 {
-	int INT_MAX = 2147483648;
-	int INT_MIN = -2147483648;
 	int sign, digit, ans, x;
 	char *p;
 
@@ -34,7 +32,5 @@ int _atoi(char *s)
 			x *= 10;
 		p--;
 	}
-	if (ans == INT_MAX && sign == -1)
-		return (INT_MIN);
 	return (sign * ans);
 }
