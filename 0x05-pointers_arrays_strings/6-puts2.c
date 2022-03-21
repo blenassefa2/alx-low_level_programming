@@ -6,13 +6,11 @@
  */
 void puts2(char *str)
 {
-	int count;
 	char *t;
 
-	count = 0
-	for (t = str; *t != '\0'; t++)
-		count++;
-	for (t = str + count; str <= t; str += 2)
+	for (t = str; t != '\0'; t++)
+		;
+	for (; str < t; str += 2)
 		printf("%c", *str);
 	printf("\n");
 }
