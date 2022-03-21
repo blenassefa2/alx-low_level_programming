@@ -25,7 +25,7 @@ int _atoi(char *s)
 	{
 		int temp;
 
-		temp = *p + '0';
+		temp = *p - '0';
 		ans += (temp * x);
 		x *= 10;
 		p--;
