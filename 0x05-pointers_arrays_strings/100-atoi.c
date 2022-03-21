@@ -21,12 +21,12 @@ int _atoi(char *s)
 			sign *= -1;
 	}
 	x = 1;
-	printf("%i", digit);
+	ans = 0;
 	for (p = p - 1; digit > 0; digit--)
 	{
 		int temp;
 
-		temp = *p - '0';
+		temp = (int)(*p) - (int)('0');
 		ans += (temp * x);
 		x *= 10;
 		p--;
