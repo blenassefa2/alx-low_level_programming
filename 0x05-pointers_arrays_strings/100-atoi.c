@@ -27,10 +27,10 @@ int _atoi(char *s)
 		int temp;
 
 		temp = (int)(*p) - (int)('0');
-		ans += (temp * x);
+		ans += (sign * (temp * x));
 		if (x < 1000000000)
 			x *= 10;
 		p--;
 	}
-	return (sign * ans);
+	return (ans);
 }
