@@ -31,8 +31,10 @@ int _atoi(char *s)
 		temp = (int)(*p) - (int)('0');
 		ans += (temp * x);
 		if (x < 1000000000)
+		{
 			x *= 10;
-		p--;
+			p--;
+		}
 	}
 	if (ans == INT_MAX && sign == -1)
 		return (INT_MIN);
