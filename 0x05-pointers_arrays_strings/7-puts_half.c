@@ -15,6 +15,6 @@ void puts_half(char *str)
 	half = count / 2;
 	if (count % 2 != 0)
 		half = (count - 1) / 2;
-	for (t = str + half; str <= t; str++)
-		printf("%c", *str);
+	for (t = t - half; str <= t; t--)
+		printf("%c", *t);
 }
