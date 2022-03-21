@@ -9,10 +9,10 @@ void print_array(int *a, int n)
 {
 	int *stop;
 
-	for (stop = a + n; a <= stop; a++)
+	for (stop = a + n; a < stop; a++)
 	{
 		printf("%i", *a);
-		if (a != stop)
+		if (a != stop - 1)
 			printf(", ");
 	}
 	printf("\n");
