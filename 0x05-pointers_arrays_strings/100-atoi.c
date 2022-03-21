@@ -1,4 +1,6 @@
 #include <stdio.h>
+#define INT_MAX 214748364
+#define INT_MIN -214748364
 /**
  *_atoi - converts the first numbers found in to integers
  *@s: the input from which an integer is extracted
