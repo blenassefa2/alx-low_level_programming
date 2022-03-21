@@ -15,7 +15,7 @@ int _atoi(char *s)
 	{
 		if (digit > 0 && (*p > '9' || *p < '0'))
 			break;
-		if (*p > '0' && *p < '9')
+		if (*p >= '0' && *p <= '9')
 			digit++;
 		if (*p == '-')
 			sign *= -1;
@@ -26,7 +26,7 @@ int _atoi(char *s)
 		int temp;
 
 		temp = *p + '0';
-		ans += temp * x;
+		ans += (temp * x);
 		x *= 10;
 		p--;
 	}
