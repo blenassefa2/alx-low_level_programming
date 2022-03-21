@@ -1,6 +1,4 @@
 #include <stdio.h>
-#define INT_MAX 2147483648
-#define INT_MIN -2147483648
 /**
  *_atoi - converts the first numbers found in to integers
  *@s: the input from which an integer is extracted
@@ -8,6 +6,8 @@
  */
 int _atoi(char *s)
 {
+	int INT_MAX = 2147483648;
+	int INT_MIN = -2147483648;
 	int sign, digit, ans, x;
 	char *p;
 
@@ -32,7 +32,7 @@ int _atoi(char *s)
 		ans += (temp * x);
 		if (x < 1000000000)
 			x *= 10;
-		p--;	
+		p--;
 	}
 	if (ans == INT_MAX && sign == -1)
 		return (INT_MIN);
