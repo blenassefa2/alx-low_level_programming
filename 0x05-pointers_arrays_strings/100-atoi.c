@@ -21,6 +21,7 @@ int _atoi(char *s)
 			sign *= -1;
 	}
 	x = 1;
+	printf("%i", digit);
 	for (p = p - 1; digit > 0; digit--)
 	{
 		int temp;
