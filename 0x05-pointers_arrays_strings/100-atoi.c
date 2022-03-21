@@ -28,7 +28,8 @@ int _atoi(char *s)
 
 		temp = (int)(*p) - (int)('0');
 		ans += (temp * x);
-		x *= 10;
+		if (x < 1000000000)
+			x *= 10;
 		p--;
 	}
 	return (sign * ans);
