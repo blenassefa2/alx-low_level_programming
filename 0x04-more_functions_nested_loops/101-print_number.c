@@ -1,22 +1,37 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+
+
 /**
- * print_number - print number
- * @n: first number
- * Return: nothing (void)
+ * print_number - like a hello world
+ *
+ * @n: params an integer
+ *
+ * No return
  */
 
-int print_number(int n)
+
+void print_number(int n)
 {
-	if (n < 0)
+
+	unsigned int n1 = 0;
+
+	if  (n < 0)
 	{
-		n = -1 * n;
+		n1 = -n;
 		_putchar('-');
 	}
-	if (n / 10)
+
+	else
 	{
-		print_number(n / 10);
+		n1 = n;
 	}
-	_putchar((n % 10) + '0');
+
+	if (n1 / 10)
+	{
+		print_number(n1 / 10);
+	}
+
+	_putchar((n1 % 10) + '0');
 }
