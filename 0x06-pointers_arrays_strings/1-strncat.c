@@ -12,9 +12,11 @@ char *_strncat(char *dest, char *src, int n)
 	char *temp2;
 
 	temp = dest;
-	for (temp2 = src; n > 0; temp2++)
+	for (temp2 = src; n >= 0; temp2++)
 	{
 		*temp = *temp2;
+		if (*temp == '\0')
+			break;
 		temp++;
 		n--;
 	}
