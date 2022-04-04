@@ -8,8 +8,12 @@
 char *_strdup(char *str)
 {
 	char *ans, *tmp;
+	int counter;
 
-	ans = malloc(sizeof(str));
+	counter = 0;
+	for (tmp = str; *tmp != '\0'; tmp++, counter++)
+		;
+	ans = malloc(sizeof(char) * counter);
 	if (ans == NULL || str == NULL)
 		return (NULL);
 	for (tmp = ans; *str != '\0'; str++, tmp++)
