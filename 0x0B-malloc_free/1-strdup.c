@@ -10,7 +10,7 @@ char *_strdup(char *str)
 	char *ans, *tmp;
 	int counter;
 
-	counter = 0;
+	counter = 1;
 	for (tmp = str; *tmp != '\0'; tmp++, counter++)
 		;
 	ans = malloc(sizeof(char) * counter);
