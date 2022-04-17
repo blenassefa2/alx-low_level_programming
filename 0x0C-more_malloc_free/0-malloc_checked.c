@@ -1,8 +1,9 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 /**
  * malloc_checked - allocate memory
  * @b: what to allocate
+ *
  * Return: the space allocated; 98 if failure
  */
 void *malloc_checked(unsigned int b)
