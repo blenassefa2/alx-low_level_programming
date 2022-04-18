@@ -1,6 +1,38 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
+
+/**
+ * _strlen - calculates the total length of string
+ * @s: a reference to the first char of a string
+ * Return: the length of the string
+ */
+int _strlen(char *s)
+{
+	int count;
+
+	for (count = 0; *s != '\0'; s++)
+		count++;
+	return (count);
+}
+/**
+ * is_digit - tells if character is digit or not
+ * @s: ascii code of a character
+ * Return: 1 if digit otherwise 0
+ */
+
+int is_digit(char *s)
+{
+	int i = 0;
+
+	while (s[i])
+	{
+		if (s[i] < '0' || s[i] > '9')
+			return (0);
+		i++;
+	}
+	return (1);
+}
 /**
  * errors - handles errors for main
  */
