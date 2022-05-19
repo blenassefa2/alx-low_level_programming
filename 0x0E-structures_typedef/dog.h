@@ -13,6 +13,6 @@ struct dog
 	char *owner;
 };
 
-void init_dog(struct dog *, char *, int, char *);
-void print_dog(struct dog *);
+void init_dog(struct dog *d, char *name, int age, char *owner);
+void print_dog(struct dog *d);
 #endif
