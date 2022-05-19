@@ -26,6 +26,7 @@ int slen(char *s)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	int k;
 	dog_t *ret = malloc(sizeof(dog_t));
 
 	if (!ret)
@@ -46,16 +47,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	while (name++)
+
+	for (k = 0; k < slen(name); k++)
 	{
-		*ret->name = *name;
-		ret->name++;
+		ret->name[k] = name[k];
 	}
-	while (owner++)
+	ret->name[k] = '\0';
+	for (k = 0; k < slen(owner); k++)
 	{
-		*ret->owner = *owner;
-		ret->owner++;
+		ret->owner[k] = owner[k];
 	}
+	ret->owner[k] = '\0';
 	ret->age = age;
 	return (ret);
 }
