@@ -35,23 +35,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	ret->name = malloc(sizeof(char) * slen(name));
+	ret->name = name;
 	if (!(ret->name))
 	{
 		free(ret->name);
 		free(ret);
 		return (NULL);
 	}
-	ret->name = name;
 	ret->age = age;
 
 	ret->owner = malloc(sizeof(char) * slen(owner));
+	ret->owner = owner;
 	if (!(ret->owner))
 	{
 		free(ret->owner);
 		free(ret);
 		return (NULL);
 	}
-	ret->owner = owner;
 
 	return (ret);
 }
