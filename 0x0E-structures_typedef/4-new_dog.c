@@ -17,17 +17,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(ret);
 		return (NULL);
 	}
-	if (ret->name)
-		ret->name = name;
-	else
+
+	ret->name = name;
+	if (!(ret->name))
 	{
 		free(ret);
 		return (NULL);
 	}
 	ret->age = age;
-	if (ret->owner)
-		ret->owner = owner;
-	else
+
+	ret->owner = owner;
+	if (!(ret->owner))
 	{
 		free(ret);
 		return (NULL);
