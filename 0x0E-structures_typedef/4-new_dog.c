@@ -14,7 +14,7 @@ int slen(char *s)
 	{ 
 		count++;
 	}
-	return (count);
+	return (count + 1);
 }
 /**
  * new_dog - creates a new dog instance
@@ -29,17 +29,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *ret = malloc(sizeof(dog_t));
 
 	if (!ret)
-	{
-		free(ret);
 		return (NULL);
-	}
 
 	ret->name = malloc(sizeof(char) * slen(name));
 	ret->name = name;
 	if (!(ret->name))
 	{
-		free(ret->name);
 		free(ret);
+		free(ret->name);
 		return (NULL);
 	}
 	ret->age = age;
@@ -48,8 +45,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	ret->owner = owner;
 	if (!(ret->owner))
 	{
-		free(ret->owner);
 		free(ret);
+		free(ret->owner);
 		return (NULL);
 	}
 
