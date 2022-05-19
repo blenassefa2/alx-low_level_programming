@@ -46,8 +46,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	ret->name = name;
-	ret->owner = owner;
+	while (name++)
+	{
+		*ret->name = *name;
+		ret->name++;
+	}
+	while (owner++)
+	{
+		*ret->owner = *owner;
+		ret->owner++;
+	}
 	ret->age = age;
 	return (ret);
 }
