@@ -1,6 +1,22 @@
 #include <stdlib.h>
 #include "dog.h"
 /**
+ * slen - calc length
+ * @s: tobe calc
+ *
+ * Return:num of chars in s
+ */
+int slen(char *s)
+{
+	int count = 0;
+
+	while (*s++)
+	{ 
+		count++;
+	}
+	return (count);
+}
+/**
  * new_dog - creates a new dog instance
  * @name: name of new dog
  * @age: age of new dog
@@ -18,19 +34,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	ret->name = malloc(sizeof(char) * strlen(name));
+	ret->name = malloc(sizeof(char) * slen(name));
 	if (!(ret->name))
 	{
 		free(ret->name);
+		free(ret);
 		return (NULL);
 	}
 	ret->name = name;
 	ret->age = age;
 
-	ret->owner = malloc(sizeof(char) * strlen(owner));
+	ret->owner = malloc(sizeof(char) * slen(owner));
 	if (!(ret->owner))
 	{
 		free(ret->owner);
+		free(ret);
 		return (NULL);
 	}
 	ret->owner = owner;
