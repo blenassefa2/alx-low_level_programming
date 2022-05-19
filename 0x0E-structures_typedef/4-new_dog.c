@@ -11,7 +11,7 @@ int slen(char *s)
 	int count = 0;
 
 	while (*s++)
-	{ 
+	{
 		count++;
 	}
 	return (count + 1);
@@ -32,23 +32,22 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 
 	ret->name = malloc(sizeof(char) * slen(name));
-	ret->name = name;
 	if (!(ret->name))
 	{
 		free(ret);
-		free(ret->name);
 		return (NULL);
 	}
-	ret->age = age;
 
 	ret->owner = malloc(sizeof(char) * slen(owner));
-	ret->owner = owner;
 	if (!(ret->owner))
 	{
+		free(ret->name);
 		free(ret);
-		free(ret->owner);
 		return (NULL);
 	}
 
+	strcpy(ret->name, name);
+	strcpy(ret->owner, owner);
+	ret->age = age;
 	return (ret);
 }
