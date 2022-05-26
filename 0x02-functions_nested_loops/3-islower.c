@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
  * _islower - is a function that checks if argument is lowercase
  * @c: the input
@@ -6,7 +5,7 @@
  */
 int _islower(int c)
 {
-	if ("a" <= c && c <= "z")
+	if (c >= 97 && c <= 103)
 		return 1
 	return 0
 }
