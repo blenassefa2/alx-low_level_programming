@@ -2,11 +2,7 @@
 #define MAIN_H
 
 #include <stdio.h>
-/**
- * print_alphabet - prints alphabets in lowercase
- *
- * Return: void (noting)
- */
+int _islower(int);
 void print_alphabet(void);
 void print_alphabet_x10(void);
 #endif
