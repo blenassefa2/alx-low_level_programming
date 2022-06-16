@@ -1,6 +1,7 @@
 #include "main.h"
 
-/** append_text_to_file - it does exactly what the name suggests
+/**
+ * append_text_to_file - it does exactly what the name suggests
  * @filename: file to append to
  * @text_content: text to append
  *
@@ -29,5 +30,5 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 
 	close(fd);
-	return(1);
+	return (1);
 }
