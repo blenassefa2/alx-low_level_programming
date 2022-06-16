@@ -7,6 +7,6 @@ void first(void)__attribute__((constructor));
  */
 void first(void)
 {
-	printf("Your're beat! and yet, you must allow\n");
+	printf("Your're beat! and yet, you must allow,\n");
 	printf("I bore my house up on my back!\n");
 }
