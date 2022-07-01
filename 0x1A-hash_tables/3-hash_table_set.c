@@ -41,7 +41,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			new->next = curr->next;
 			ht->array[i] = new;
-			free_node(curr);
 			return (1);
 		}
 		while (curr->next != NULL && strcmp(curr->next->key, key) != 0)
@@ -49,7 +48,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(curr->key, key) == 0)
 		{
 			new->next = curr->next->next;
-			free_node(curr->next);
 			curr->next = new;
 		}
 		else
