@@ -1,16 +1,6 @@
 #include "hash_tables.h"
 
 /**
- * free_node - frees a node
- * @node: a hash_node_t to be freed
- */
-void free_node(hash_node_t *node)
-{
-	free(node->key);
-	free(node->key);
-	free(node);
-}
-/**
  * hash_table_set - adds an element to the hash table
  * @ht: pointer to the hash table
  * @key: key of new element
