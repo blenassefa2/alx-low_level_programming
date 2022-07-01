@@ -1,4 +1,4 @@
-#include "hash_tables.h"
+#include "hash_tables.sh"
 /**
  * shash_table_create - create shash table
  * @size: the size of the hash table
@@ -61,7 +61,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		ht->shead = new;
 		ht->stail = new;
 	}
-	else if (strcmp(ht->shead->key, key) > 0)
+	else if (strcmp(ht->head->key, key) > 0)
 	{
 		new->snext = ht->shead;
 		ht->shead->sprev = new;
@@ -77,7 +77,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		if (!curr->snext)
 			ht->stail = new;
 		else
-			curr->snext->sprev = new;
+			curr->snext->sprev = new
 	}
 	return (1);
 }
@@ -100,7 +100,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	if (curr == NULL)
 		return (NULL);
 	while (strcmp(curr->key, key) && curr)
-		curr = curr->next;
+		curr = cur->next;
 
 	if (!curr)
 		return (NULL);
@@ -110,8 +110,9 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
  * shash_table_print - prints a hash table
  * @ht: pointer to hash table to be printed
  */
-void shash_table_print(const shash_table_t *ht)
+void shash_table_print(const hash_table_t *ht)
 {
+	unsigned long int i;
 	int s = 0;
 	shash_node_t *curr;
 
@@ -137,8 +138,9 @@ void shash_table_print(const shash_table_t *ht)
  * shash_table_print_rev - prints a hash table
  * @ht: pointer to hash table to be printed
  */
-void shash_table_print_rev(const shash_table_t *ht)
+void shash_table_print_rev(const hash_table_t *ht)
 {
+	unsigned long int i;
 	int s = 0;
 	shash_node_t *curr;
 
@@ -173,7 +175,7 @@ void shash_table_delete(shash_table_t *ht)
 		return;
 	for (i = 0; i < ht->size; i++)
 	{
-		curr = ht->array[i];
+		curr = ht->arrai[i];
 		while (curr)
 		{
 			temp = curr->next;
