@@ -8,15 +8,14 @@
  */
 void reverse_array(int *a, int n)
 {
-	int *tmp, *tmp2, *c;
+	int i, j, tmp;
 
-	tmp = malloc(sizeof(int) * n);
-	tmp2 = tmp;
-	for (c = a + n; c >= a; c--)
+	j = n - 1;
+
+	for (i = 0; i< n / 2; i++)
 	{
-		*tmp2 = *c;
-		tmp2++;
+		tmp = a[i];
+		a[i] = a[j];
+		a[j--] = tmp;
 	}
-	for (; tmp < tmp2; tmp++, a++)
-		*a = *tmp;
 }
