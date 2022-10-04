@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	long in i, j = 1, k = 2, next;
+	long int i, j = 1, k = 2, next;
 
 	for (i = 1; i <= 50; ++i)
 	{
