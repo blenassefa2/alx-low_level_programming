@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-
 int linear_search(int *, size_t, int);
 int binary_search(int *, size_t, int);
 int help_binary(int *, int, size_t, size_t);
